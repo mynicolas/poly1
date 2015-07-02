@@ -1,0 +1,48 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="demo-container">
+	<template>
+		<style>	
+			#container {
+				margin-bottom: 10px;
+				padding: 20px;
+				background-color: #E2E2E2;
+				box-shadow: 0px 0px 10px #333;
+			}
+		</style>
+		<div id="container">
+			<h1>{{ title }}</h1>
+			<content></content>					  		
+		</div>
+	</template>
+	<script>
+		Polymer({
+			is: "demo-container",
+			properties: {
+				title: String
+			}
+		});
+	</script>
+</dom-module>
+
+
+<dom-module id="one-kind-container">
+	<style>
+		h3 {
+			padding: 0 20px;
+		}
+	</style>
+	<template>
+		<h3>{{ title }}</h3>
+		<content></content>	
+	</template>
+	<script>
+		Polymer({
+			is: "one-kind-container",
+			properties: {
+				title: String
+			}
+		});
+	</script>
+</dom-module>
+

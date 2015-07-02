@@ -1,0 +1,79 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="demo-container.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
+<dom-module id="demo-paper-button">
+	<template>
+		<style>
+			.colorful-1 {
+				background-color: #00AFEE;
+				color: #fff;
+			}
+			.colorful-2 {
+				background-color: #40C8BF;
+				color: #fff;
+			}
+			.colorful-3 {
+				background-color: #E770C4;
+				color: #fff;
+			}
+			.colorful-4 {
+				background-color: #FFB60D;
+				color: #fff;
+			}
+			.colorful-5 {
+				background-color: #F68383;
+				color: #fff;
+			}
+		</style>
+
+		<demo-container title="paper-button">
+
+	  	<one-kind-container title="Flat button">
+		  	<div class="flat-button">
+	  			<paper-button>button</paper-button>
+	  			<paper-button class="colorful-1">colorful</paper-button>
+	  			<paper-button disabled>disabled</paper-button>
+	  			<paper-button noink>noink</paper-button>
+	  			<paper-button class="colorful-2"><iron-icon icon="check"></iron-icon>ok</paper-button>
+		  	</div>
+	  	</one-kind-container>
+
+  		<one-kind-container title="Raised button">
+	  		<div class="raised-button">
+	  			<paper-button raised>button</paper-button>
+	  			<paper-button class="colorful-1" raised>colorful</paper-button>
+	  			<paper-button disabled raised>disabled</paper-button>
+	  			<paper-button noink raised>noink</paper-button>
+	  			<paper-button class="colorful-2" raised><iron-icon icon="check"></iron-icon>ok</paper-button>
+	  		</div>
+  		</one-kind-container>
+
+			<one-kind-container title="Togglable button">
+	  		<div class="togglable-button">
+	  			<paper-button raised toggles>button</paper-button>
+	  			<paper-button class="colorful-1" raised toggles>colorful</paper-button>
+	  			<paper-button disabled raised toggles>disabled</paper-button>
+	  			<paper-button noink raised toggles>noink</paper-button>
+	  			<paper-button class="colorful-2" raised toggles><iron-icon icon="check"></iron-icon>ok</paper-button>
+	  		</div>
+  		</one-kind-container>
+
+			<one-kind-container title="Colorful button">
+	  		<div class="togglable-button">
+	  			<paper-button class="colorful-1">button</paper-button>
+	  			<paper-button class="colorful-2">colorful</paper-button>
+	  			<paper-button class="colorful-3">disabled</paper-button>
+	  			<paper-button noink class="colorful-4">noink</paper-button>
+	  			<paper-button class="colorful-5"><iron-icon icon="check"></iron-icon>ok</paper-button>
+	  		</div>
+  		</one-kind-container>
+								  		
+		</demo-container>
+	</template>
+	<script>
+		Polymer({
+			is: "demo-paper-button"
+		});
+	</script>
+</dom-module>
