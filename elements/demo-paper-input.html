@@ -1,6 +1,15 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="demo-container.html">
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-input/demo/ssn-input.html">
+<link rel="import" href="../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../bower_components/paper-input/paper-input-container.html">
+<link rel="import" href="../bower_components/paper-input/paper-input-error.html">
+<link rel="import" href="../bower_components/paper-input/paper-input-char-counter.html">
+<link rel="import" href="../bower_components/iron-input/iron-input.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+
 
 <dom-module id="demo-paper-input">
 	<style>
@@ -8,16 +17,51 @@
 	</style>
 	<template>
 		<demo-container title="paper-input">
+
 			<one-kind-container title="Text input">
 				<paper-input label="some string to be input ..."></paper-input>
 				<paper-input label="password" type="password"></paper-input>
 				<paper-input label="no label float" no-label-float></paper-input>
+				<paper-input label="disabled" disabled></paper-input>
 			</one-kind-container>
+
+			<one-kind-container title="Text area">
+				<paper-textarea label="some text to be input ..."></paper-textarea>
+			</one-kind-container>
+			
+			<one-kind-container title="Validate input">
+	      <paper-input id="inputForValidation" required label="only type numbers (no auto validate)" pattern="[0-9]*" error-message="numbers only, required input!"></paper-input>
+	      <br>
+	      <paper-button raised on-tap="validate">Validate?</paper-button>
+	      <br>
+	      <paper-input label="only type letters (auto-validate)" auto-validate pattern="[a-zA-Z]*" error-message="letters only!"></paper-input>
+			</one-kind-container>
+
+			<one-kind-container title="Character counter">
+	      <paper-input label="label" char-counter></paper-input>
+	      <paper-input label="at most 10 letters" char-counter auto-validate pattern="[a-zA-Z]*" maxlength="10" error-message="letters only!"></paper-input>
+	      <paper-textarea label="textarea" char-counter></paper-textarea>
+	      <paper-textarea label="textarea with maxlength" char-counter maxlength="10"></paper-textarea>		
+      </one-kind-container>	
+
+      <one-kind-container title="Complex input">
+	      <template is="dom-bind">
+	        <paper-input-container always-float-label auto-validate attr-for-value="value">
+	          <label>Social Security Number</label>
+	          <ssn-input class="paper-input-input"></ssn-input>
+	          <paper-input-error>SSN invalid!</paper-input-error>
+	        </paper-input-container>
+	      </template>
+      </one-kind-container>
+
 		</demo-container>
 	</template>
 	<script>
 		Polymer({
-			is: "demo-paper-input"
+			is: "demo-paper-input",
+			validate: function(){
+				this.$.inputForValidation.validate();
+			}
 		});
 	</script>
 </dom-module>

@@ -1,0 +1,54 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="demo-container.html">
+<link rel="import" href="../bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+
+<dom-module id="demo-paper-menu">
+	<template>
+		<style>
+			paper-menu.list {
+				width: 200px;
+				--paper-menu-selected-item: {
+					color: red;
+				}
+			}
+		</style>
+
+		<demo-container title="paper-menu">
+
+	  	<one-kind-container title="Standard">
+        <paper-menu class="list">
+          <paper-item>Inbox</paper-item>
+          <paper-item>Starred</paper-item>
+          <paper-item>Sent mail</paper-item>
+          <paper-item>Drafts</paper-item>
+        </paper-menu>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Pre-selected">
+        <paper-menu class="list" selected="0">
+          <paper-item>Inbox</paper-item>
+          <paper-item disabled>Starred</paper-item>
+          <paper-item>Sent mail</paper-item>
+          <paper-item>Drafts</paper-item>
+        </paper-menu>	  	
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Multi-select">
+        <paper-menu class="list" multi>
+          <paper-item>Bold</paper-item>
+          <paper-item>Italic</paper-item>
+          <paper-item>Underline</paper-item>
+          <paper-item>Strikethrough</paper-item>
+        </paper-menu>	  	
+	  	</one-kind-container>
+								  		
+		</demo-container>
+	</template>
+	<script>
+		Polymer({
+			is: "demo-paper-menu"
+		});
+	</script>
+</dom-module>

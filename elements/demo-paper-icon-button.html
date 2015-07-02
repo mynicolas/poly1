@@ -1,0 +1,107 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="demo-container.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+
+<dom-module id="demo-paper-icon-button">
+	<template>
+		<style>
+
+      paper-icon-button.blue {
+        color: blue;
+      }
+
+      paper-icon-button.red {
+        color: red;
+      }
+
+      paper-icon-button.orange {
+        color: orange;
+      }
+
+      paper-icon-button.green {
+        color: green;
+      }
+
+      paper-icon-button.blue:hover {
+        background: rgba(0, 0, 255, 0.1);
+        border-radius: 50%;
+      }
+
+      paper-icon-button.red:hover {
+        background: rgba(255, 0, 0, 0.1);
+        border-radius: 50%;
+      }
+
+      paper-icon-button.orange:hover {
+        background: rgba(125, 125, 0, 0.1);
+        border-radius: 50%;
+      }
+
+      paper-icon-button.green:hover {
+        background: rgba(0, 255, 0, 0.1);
+        border-radius: 50%;
+      }
+
+      paper-icon-button.huge {
+        margin-left: 0px;
+        width: 100px;
+        --paper-icon-button-ink-color: ;
+      }
+
+      paper-icon-button.huge::shadow #icon {
+        width: 100px;
+        height: 100px;
+      }
+
+      paper-icon-button.huge #icon {
+        width: 100px;
+        height: 100px;
+      }		
+		</style>
+
+		<demo-container title="paper-icon-button">
+
+	  	<one-kind-container title="Enabled">
+        <paper-icon-button icon="menu" title="menu"></paper-icon-button>
+        <paper-icon-button icon="favorite" title="heart"></paper-icon-button>
+        <paper-icon-button icon="arrow-back" title="arrow-back"></paper-icon-button>
+        <paper-icon-button icon="arrow-forward" title="arrow-forward"></paper-icon-button>
+        <paper-icon-button icon="clear" title="clear"></paper-icon-button>
+        <paper-icon-button icon="polymer" title="polymer"></paper-icon-button>
+        <paper-icon-button src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" aria-label="octocat" title="octocat"></paper-icon-button>	  	
+	  	</one-kind-container>
+
+			<one-kind-container title="Disabled">
+        <paper-icon-button icon="menu" title="menu" disabled></paper-icon-button>
+        <paper-icon-button icon="favorite" title="heart" disabled></paper-icon-button>
+        <paper-icon-button icon="arrow-back" title="arrow-back" disabled></paper-icon-button>
+        <paper-icon-button icon="arrow-forward" title="arrow-forward" disabled></paper-icon-button>
+        <paper-icon-button icon="clear" title="clear" disabled></paper-icon-button>
+        <paper-icon-button icon="polymer" title="polymer" disabled></paper-icon-button>
+        <paper-icon-button src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" aria-label="octocat" title="octocat" disabled></paper-icon-button>
+			</one-kind-container>
+								  		
+			<one-kind-container title="Colorful">
+        <paper-icon-button icon="menu" title="menu" class="blue"></paper-icon-button>
+        <paper-icon-button icon="favorite" title="heart" class="red"></paper-icon-button>
+        <paper-icon-button icon="arrow-back" title="arrow-back" class="orange"></paper-icon-button>
+        <paper-icon-button icon="arrow-forward" title="arrow-forward" class="green"></paper-icon-button>
+        <paper-icon-button icon="clear" title="clear" class="blue"></paper-icon-button>
+        <paper-icon-button icon="polymer" title="polymer" class="red"></paper-icon-button>
+        <paper-icon-button class="blue" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" aria-label="octocat" title="octocat"></paper-icon-button>
+			</one-kind-container>
+
+			<one-kind-container title="Size">
+        <paper-icon-button icon="favorite" title="heart" class="huge"></paper-icon-button>
+        <paper-icon-button icon="polymer" title="polymer" class="huge"></paper-icon-button>				
+			</one-kind-container>
+		</demo-container>
+	</template>
+	<script>
+		Polymer({
+			is: "demo-paper-icon-button"
+		});
+	</script>
+</dom-module>

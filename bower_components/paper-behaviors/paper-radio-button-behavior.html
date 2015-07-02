@@ -13,12 +13,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <script>
 
-  /**
-   * `Polymer.PaperInkyFocusBehavior` implements a ripple when the element has keyboard focus.
-   *
-   * @polymerBehavior Polymer.PaperInkyFocusBehavior
-   */
-  Polymer.PaperInkyFocusBehaviorImpl = {
+  /** @polymerBehavior */
+  Polymer.PaperRadioButtonInk = {
 
     observers: [
       '_focusedChanged(receivedFocusFromKeyboard)'
@@ -34,11 +30,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   };
 
-  /** @polymerBehavior Polymer.PaperInkyFocusBehavior */
-  Polymer.PaperInkyFocusBehavior = [
+  /** @polymerBehavior */
+  Polymer.PaperRadioButtonBehavior = [
     Polymer.IronButtonState,
     Polymer.IronControlState,
-    Polymer.PaperInkyFocusBehaviorImpl
+    Polymer.PaperRadioButtonInk
   ];
 
 </script>

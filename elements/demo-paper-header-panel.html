@@ -1,0 +1,139 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="demo-container.html">
+<link rel="import" href="../bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+
+<dom-module id="demo-paper-header-panel">
+	<template>
+		<style>
+
+      paper-toolbar.blue {
+        background-color: blue;
+      }
+      paper-toolbar.red {
+        background-color: red;
+      }
+      paper-toolbar.orange {
+        background-color: orange;
+      }
+      paper-toolbar.green {
+        background-color: green;
+      }
+      paper-toolbar.cyan {
+        background-color: cyan;
+      }
+      paper-toolbar.lime {
+        background-color: lime;
+      }
+      paper-toolbar.pink {
+        background-color: pink;
+      }		
+
+      .header-panel {
+        width: 340px;
+        height: 300px;
+        margin: 12px;
+      }
+			.test-content {
+				height: 1000px;
+				width: 80%;
+				margin: 80px 10% 0 10%;
+			}
+
+      [mode="standard"] .test-content {
+        background: linear-gradient(white, #f8bbd0);
+      }
+      [mode="seemed"] .test-content {
+        background: linear-gradient(white, #f0f4c3);
+      }
+      [mode="scroll"] .test-content {
+        background: linear-gradient(white, #ffecb3);
+      }
+      [mode="waterfall"] .test-content {
+        background: linear-gradient(white, #c8e6c9);
+      }
+      [mode="waterfall-tall"][tall-class="medium-tall"] .test-content {
+        background: linear-gradient(white, #b2ebf2);
+      }
+      [mode="waterfall-tall"] .test-content {
+        background: linear-gradient(white, #f0f4c3);
+      }
+      [mode="cover"] .test-content {
+        background: linear-gradient(white, #f8bbd0);
+      }
+		</style>
+
+		<demo-container title="paper-header-panel">
+
+	  	<one-kind-container title="Standard">
+	      <paper-header-panel shadow mode="standard" class="header-panel">
+	      	<paper-toolbar class="blue">
+	      	  <h2>standard</h2>
+	      	</paper-toolbar>
+	        <div class="test-content"></div>
+	      </paper-header-panel>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Seemed">
+	      <paper-header-panel class="header-panel" mode="seemed">
+	        <paper-toolbar class="red">
+	          <h2>seemed</h2>
+	        </paper-toolbar>
+	        <div class="test-content"></div>
+	      </paper-header-panel>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Scroll">
+	      <paper-header-panel class="header-panel" mode="scroll">
+	        <paper-toolbar class="orange">
+	          <h2>scroll</h2>
+	        </paper-toolbar>
+	        <div class="test-content"></div>
+	      </paper-header-panel>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Waterfall">
+	      <paper-header-panel class="header-panel" mode="waterfall">
+	        <paper-toolbar class="green">
+	          <h2>waterfall</h2>
+	        </paper-toolbar>
+	        <div class="test-content"></div>
+	      </paper-header-panel>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Waterfall-tall medium-tall">
+	      <paper-header-panel class="header-panel" tall-class="medium-tall" mode="waterfall-tall">
+	        <paper-toolbar class="pink">
+	          <h2>waterfall-tall:medium-tall</h2>
+	        </paper-toolbar>
+	        <div class="test-content"></div>
+	      </paper-header-panel>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Waterfall-tall">
+	      <paper-header-panel class="header-panel" mode="waterfall-tall">
+	        <paper-toolbar class="cyan">
+	          <h2>waterfall-tall</h2>
+	        </paper-toolbar>
+	        <div class="test-content"></div>
+	      </paper-header-panel>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Cover">
+	      <paper-header-panel class="header-panel" mode="cover">
+	        <paper-toolbar class="tall">
+	          <h2>cover</h2>
+	        </paper-toolbar>
+	        <div class="test-content"></div>
+	      </paper-header-panel>
+	  	</one-kind-container>
+								  		
+		</demo-container>
+	</template>
+	<script>
+		Polymer({
+			is: "demo-paper-header-panel"
+		});
+	</script>
+</dom-module>

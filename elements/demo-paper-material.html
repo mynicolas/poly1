@@ -1,0 +1,90 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="demo-container.html">
+<link rel="import" href="../bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+<link rel="import" href="../bower_components/paper-styles/typography.html">
+<link rel="import" href="../bower_components/paper-material/paper-material.html">
+
+<dom-module id="demo-paper-material">
+	<template>
+		<style>
+      paper-material.thisMaterial {
+        background: white;
+        box-sizing: border-box;
+        width: 200px;
+        margin: 16px;
+        padding: 16px;
+        border-radius: 2px;
+      }
+      .fabButton {
+        display: inline-block;
+        background: white;
+        box-sizing: border-box;
+        width: 56px;
+        height: 56px;
+        margin: 16px;
+        padding: 16px;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+      }      
+		</style>
+
+		<demo-container title="paper-material">
+
+	  	<one-kind-container title="Paper Elevations">
+	      <paper-material class="thisMaterial" elevation="0">
+	        elevation = 0
+	      </paper-material>
+
+	      <paper-material class="thisMaterial" elevation="1">
+	        elevation = 1
+	      </paper-material>
+
+	      <paper-material class="thisMaterial" elevation="2">
+	        elevation = 2
+	      </paper-material>
+
+	      <paper-material class="thisMaterial" elevation="3">
+	        elevation = 3
+	      </paper-material>
+
+	      <paper-material class="thisMaterial" elevation="4">
+	        elevation = 4
+	      </paper-material>
+
+	      <paper-material class="thisMaterial" elevation="5">
+	        elevation = 5
+	      </paper-material>	  	
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Animated">
+
+	      <paper-material class="thisMaterial" on-tap="chmod" elevation="0" animated>
+	        tap
+	      </paper-material>
+
+	      <paper-material class="thisMaterial" on-tap="chmod" class="fabButton layout center-center" elevation="0" animated>
+	        tap
+	      </paper-material>	
+        	
+	  	</one-kind-container>
+								  		
+		</demo-container>
+	</template>
+	<script>
+		Polymer({
+			is: "demo-paper-material",
+			chmod: function(e){
+				var button = e.target;
+				var elev = parseInt(e.target.elevation);
+				if(elev<=4){
+					elev ++;
+				}
+				if(elev>=5){
+					elev = 0;
+				}
+				e.target.elevation = elev;
+			}
+		});
+	</script>
+</dom-module>

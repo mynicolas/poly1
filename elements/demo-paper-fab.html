@@ -1,0 +1,61 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="demo-container.html">
+<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+
+<dom-module id="demo-paper-fab">
+	<template>
+		<style>
+
+	    paper-fab.blue {
+	      background-color: black;
+	    }
+
+	    paper-fab.red {
+	      background-color: red;
+	    }
+
+	    paper-fab.green {
+	      background-color: green;
+	    }
+
+	    paper-fab.orange {
+	      background-color: blue;
+	    }
+		</style>
+
+		<demo-container title="paper-fab">
+
+	  	<one-kind-container title="Enabled">
+        <paper-fab icon="arrow-forward" title="arrow-forward"></paper-fab>
+        <paper-fab icon="create" title="create"></paper-fab>
+        <paper-fab icon="favorite" title="heart"></paper-fab>
+        <paper-fab mini icon="done" title="done"></paper-fab>
+        <paper-fab mini icon="reply" title="reply"></paper-fab>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Disabled">
+        <paper-fab icon="arrow-forward" title="arrow-forward" disabled></paper-fab>
+        <paper-fab icon="create" title="create" disabled></paper-fab>
+        <paper-fab icon="favorite" title="heart" disabled></paper-fab>
+        <paper-fab mini icon="done" title="done" disabled></paper-fab>
+        <paper-fab mini icon="reply" title="reply" disabled></paper-fab>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Colorful">
+        <paper-fab icon="arrow-forward" title="arrow-forward" class="blue"></paper-fab>
+        <paper-fab icon="create" title="create" class="red"></paper-fab>
+        <paper-fab icon="favorite" title="heart" class="green"></paper-fab>
+        <paper-fab mini icon="done" title="done" class="orange"></paper-fab>
+        <paper-fab mini icon="reply" title="reply" class="blue"></paper-fab>
+	  	</one-kind-container>
+								  		
+		</demo-container>
+	</template>
+	<script>
+		Polymer({
+			is: "demo-paper-fab"
+		});
+	</script>
+</dom-module>

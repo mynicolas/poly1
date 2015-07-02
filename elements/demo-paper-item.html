@@ -1,0 +1,207 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="demo-container.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-item/paper-icon-item.html">
+<link rel="import" href="../bower_components/paper-item/paper-item-body.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icons/communication-icons.html">
+<link rel="import" href="../bower_components/paper-toggle-button/communicapaper-toggle-button.html">
+
+<dom-module id="demo-paper-item">
+	<template>
+		<style>
+			paper-icon-item {
+				width: 200px;
+			}
+	    .avatar {
+	      display: inline-block;
+	      width: 40px;
+	      height: 40px;
+	      border-radius: 50%;
+	      overflow: hidden;
+	      background: #ccc;
+	    }
+
+	    .blue {
+	      background-color: lightblue;
+	    }
+	    .red {
+	      background-color: lightcyan;
+	    }
+	    .orange {
+	      background-color: lightsalmon;
+	    }
+	    .green {
+	      background-color: lightgreen;
+	    }
+		</style>
+
+		<demo-container title="paper-item">
+
+	  	<one-kind-container title="Single line items">
+        <paper-item>Inbox</paper-item>
+        <paper-item>Starred</paper-item>
+        <paper-item>Sent mail</paper-item>
+        <paper-item>Drafts</paper-item>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Icon with text">
+        <paper-icon-item>
+          <iron-icon icon="inbox" item-icon></iron-icon> Inbox
+        </paper-icon-item>
+        <paper-icon-item>
+          <iron-icon icon="send" item-icon></iron-icon> Outbox
+        </paper-icon-item>
+        <paper-icon-item>
+          <iron-icon icon="delete" item-icon></iron-icon> Trash
+        </paper-icon-item>
+        <paper-icon-item>
+	        <iron-icon icon="report" item-icon></iron-icon> Spam
+	      </paper-icon-item>	  	
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Avatar with text">
+        <paper-icon-item>
+          <div class="avatar blue" item-icon></div> Alphonso Engelking
+        </paper-icon-item>
+        <paper-icon-item>
+          <div class="avatar red" item-icon></div> Andrews Boyd
+        </paper-icon-item>
+        <paper-icon-item>
+          <div class="avatar orange" item-icon></div> Angela Decker
+        </paper-icon-item>
+        <paper-icon-item>
+          <div class="avatar green" item-icon></div> Lorem Ipsum
+        </paper-icon-item>	  		
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Avatar with text and control">
+        <paper-icon-item>
+          <div class="avatar orange" item-icon></div>
+          <div class="flex">Alphonso</div>
+          <paper-checkbox></paper-checkbox>
+        </paper-icon-item>
+        <paper-icon-item>
+          <div class="avatar green" item-icon></div>
+          <div class="flex">Andrews</div>
+          <paper-checkbox checked></paper-checkbox>
+        </paper-icon-item>
+        <paper-icon-item>
+          <div class="avatar blue" item-icon></div>
+          <div class="flex">Angela</div>
+          <paper-checkbox></paper-checkbox>
+        </paper-icon-item>
+        <paper-icon-item>
+          <div class="avatar red" item-icon></div>
+          <div class="flex">Lorem</div>
+          <paper-checkbox></paper-checkbox>
+        </paper-icon-item>	  		
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Control with text and icon">
+        <paper-icon-item>
+          <paper-checkbox item-icon></paper-checkbox>
+          <div class="flex">Alphonso</div>
+          <iron-icon icon="communication:messenger"></iron-icon>
+        </paper-icon-item>
+        <paper-icon-item>
+          <paper-checkbox checked item-icon></paper-checkbox>
+          <div class="flex">Andrews</div>
+          <iron-icon icon="communication:messenger"></iron-icon>
+        </paper-icon-item>
+        <paper-icon-item>
+          <paper-checkbox item-icon></paper-checkbox>
+          <div class="flex">Angela</div>
+          <iron-icon icon="communication:messenger"></iron-icon>
+        </paper-icon-item>
+        <paper-icon-item>
+          <paper-checkbox item-icon></paper-checkbox>
+          <div class="flex">Lorem</div>
+          <iron-icon icon="communication:messenger"></iron-icon>
+        </paper-icon-item>	  	
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Two-line items">
+        <paper-item>
+          <paper-item-body two-line class="layout vertical">
+            <div>Profile Photo</div>
+            <div secondary>Change your Google+ profile photo</div>
+          </paper-item-body>
+        </paper-item>
+        <paper-item>
+          <paper-item-body two-line>
+            <div>Show your status</div>
+            <div secondary>Your status is visible to everyone you use with</div>
+          </paper-item-body>
+        </paper-item>
+        <paper-item>
+          <paper-item-body two-line class="layout vertical">
+            <div>Settings</div>
+            <div secondary>Change your account settings</div>
+          </paper-item-body>
+        </paper-item>	  	
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Icon with two-line text">
+        <paper-icon-item>
+          <div class="avatar green" item-icon></div>
+          <paper-item-body two-line>
+            <div>Alphonso Engelking</div>
+            <div secondary>Change photo</div>
+          </paper-item-body>
+        </paper-icon-item>
+        <paper-icon-item>
+          <iron-icon icon="communication:phone" item-icon></iron-icon>
+          <paper-item-body two-line>
+            <div>(650) 555-1234</div>
+            <div secondary>Mobile</div>
+          </paper-item-body>
+        </paper-icon-item>
+        <paper-icon-item>
+          <iron-icon icon="communication:email" item-icon></iron-icon>
+          <paper-item-body two-line>
+            <div>alphonso@example.com</div>
+            <div secondary>Personal</div>
+          </paper-item-body>
+        </paper-icon-item>
+        <paper-icon-item>	  	
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Avatar with text and icon">
+        <paper-icon-item>
+          <div class="avatar blue" item-icon></div>
+          <paper-item-body two-line>
+            <div>Photos</div>
+            <div secondary>Jan 9, 2014</div>
+          </paper-item-body>
+          <iron-icon icon="star"></iron-icon>
+        </paper-icon-item>
+        <paper-icon-item>
+          <div class="avatar red" item-icon></div>
+          <paper-item-body two-line>
+            <div>Recipes</div>
+            <div secondary>Jan 17, 2014</div>
+          </paper-item-body>
+          <iron-icon icon="star"></iron-icon>
+        </paper-icon-item>
+        <paper-icon-item>
+          <div class="avatar orange" item-icon></div>
+          <paper-item-body two-line>
+            <div>Work</div>
+            <div secondary>Jan 28, 2014</div>
+          </paper-item-body>
+          <iron-icon icon="star"></iron-icon>
+        </paper-icon-item>	  	
+	  	</one-kind-container>
+								  		
+		</demo-container>
+	</template>
+	<script>
+		Polymer({
+			is: "demo-paper-item"
+		});
+	</script>
+</dom-module>

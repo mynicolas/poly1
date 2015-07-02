@@ -1,0 +1,43 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="demo-container.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+
+<dom-module id="demo-paper-checkbox">
+	<template>
+		<style>
+			paper-checkbox.c1 #checkboxContainer #checkbox {
+				border-color: #579694;
+				background-color: #2EF06C;
+			}
+			paper-checkbox.c2 #checkboxContainer #checkbox{
+				background-color: #CA710C;
+				color: #F7D18C;
+			}
+		</style>
+
+		<demo-container title="paper-checkbox">
+
+	  	<one-kind-container title="Enabled">
+				<paper-checkbox checked>is Checked</paper-checkbox>
+				<paper-checkbox>not checked</paper-checkbox>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Disabled">
+				<paper-checkbox checked disabled>is Checked</paper-checkbox>
+				<paper-checkbox disabled>not checked</paper-checkbox>
+	  	</one-kind-container>
+
+	  	<one-kind-container title="Colorful">
+				<paper-checkbox checked class="c1">is Checked</paper-checkbox>
+				<paper-checkbox class="c2">not checked</paper-checkbox>
+	  	</one-kind-container>
+								  		
+		</demo-container>
+	</template>
+	<script>
+		Polymer({
+			is: "demo-paper-checkbox"
+		});
+	</script>
+</dom-module>
