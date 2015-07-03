@@ -5,65 +5,66 @@
 <link rel="import" href="../bower_components/paper-styles/paper-styles.html">
 
 <dom-module id="demo-paper-header-panel">
+
+	<style>
+
+    paper-toolbar.blue {
+      background-color: blue;
+    }
+    paper-toolbar.red {
+      background-color: red;
+    }
+    paper-toolbar.orange {
+      background-color: orange;
+    }
+    paper-toolbar.green {
+      background-color: green;
+    }
+    paper-toolbar.cyan {
+      background-color: cyan;
+    }
+    paper-toolbar.lime {
+      background-color: lime;
+    }
+    paper-toolbar.pink {
+      background-color: pink;
+    }		
+
+    .header-panel {
+      width: 340px;
+      height: 300px;
+      margin: 12px;
+    }
+		.test-content {
+			height: 1000px;
+			width: 80%;
+			margin: 80px 10% 0 10%;
+		}
+
+    [mode="standard"] .test-content {
+      background: linear-gradient(white, #f8bbd0);
+    }
+    [mode="seemed"] .test-content {
+      background: linear-gradient(white, #f0f4c3);
+    }
+    [mode="scroll"] .test-content {
+      background: linear-gradient(white, #ffecb3);
+    }
+    [mode="waterfall"] .test-content {
+      background: linear-gradient(white, #c8e6c9);
+    }
+    [mode="waterfall-tall"][tall-class="medium-tall"] .test-content {
+      background: linear-gradient(white, #b2ebf2);
+    }
+    [mode="waterfall-tall"] .test-content {
+      background: linear-gradient(white, #f0f4c3);
+    }
+    [mode="cover"] .test-content {
+      background: linear-gradient(white, #f8bbd0);
+    }
+	</style>
+	
 	<template>
-		<style>
-
-      paper-toolbar.blue {
-        background-color: blue;
-      }
-      paper-toolbar.red {
-        background-color: red;
-      }
-      paper-toolbar.orange {
-        background-color: orange;
-      }
-      paper-toolbar.green {
-        background-color: green;
-      }
-      paper-toolbar.cyan {
-        background-color: cyan;
-      }
-      paper-toolbar.lime {
-        background-color: lime;
-      }
-      paper-toolbar.pink {
-        background-color: pink;
-      }		
-
-      .header-panel {
-        width: 340px;
-        height: 300px;
-        margin: 12px;
-      }
-			.test-content {
-				height: 1000px;
-				width: 80%;
-				margin: 80px 10% 0 10%;
-			}
-
-      [mode="standard"] .test-content {
-        background: linear-gradient(white, #f8bbd0);
-      }
-      [mode="seemed"] .test-content {
-        background: linear-gradient(white, #f0f4c3);
-      }
-      [mode="scroll"] .test-content {
-        background: linear-gradient(white, #ffecb3);
-      }
-      [mode="waterfall"] .test-content {
-        background: linear-gradient(white, #c8e6c9);
-      }
-      [mode="waterfall-tall"][tall-class="medium-tall"] .test-content {
-        background: linear-gradient(white, #b2ebf2);
-      }
-      [mode="waterfall-tall"] .test-content {
-        background: linear-gradient(white, #f0f4c3);
-      }
-      [mode="cover"] .test-content {
-        background: linear-gradient(white, #f8bbd0);
-      }
-		</style>
-
 		<demo-container title="paper-header-panel">
 
 	  	<one-kind-container title="Standard">

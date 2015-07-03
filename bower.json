@@ -44,6 +44,7 @@
     "paper-toolbar": "PolymerElements/paper-toolbar#1.0.0",
     "polymer": "polymer/polymer#~1.0.5",
     "paper-toggle-button": "PolymerElements/paper-toggle-button#1.0.0",
-    "paper-material": "PolymerElements/paper-material#1.0.0"
+    "paper-material": "PolymerElements/paper-material#1.0.0",
+    "paper-progress": "PolymerElements/paper-progress#1.0.0"
   }
 }

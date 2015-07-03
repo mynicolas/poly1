@@ -5,30 +5,25 @@
 <link rel="import" href="../bower_components/paper-material/paper-material.html">
 
 <dom-module id="demo-paper-material">
-	<template>
-		<style>
-      paper-material.thisMaterial {
-        background: white;
-        box-sizing: border-box;
-        width: 200px;
-        margin: 16px;
-        padding: 16px;
-        border-radius: 2px;
-      }
-      .fabButton {
-        display: inline-block;
-        background: white;
-        box-sizing: border-box;
-        width: 56px;
-        height: 56px;
-        margin: 16px;
-        padding: 16px;
-        border-radius: 50%;
-        text-align: center;
-        cursor: pointer;
-      }      
-		</style>
 
+	<style>
+    paper-material.thisMaterial {
+      background: white;
+      box-sizing: border-box;
+      width: 200px;
+      margin: 16px;
+      padding: 16px;
+      border-radius: 2px;
+    }
+    .fabButton {
+    	width: 200px;
+    	margin: 16px;
+    	padding: 16px;
+      border-radius: 50%;
+    }      
+	</style>
+		
+	<template>
 		<demo-container title="paper-material">
 
 	  	<one-kind-container title="Paper Elevations">
@@ -63,7 +58,7 @@
 	        tap
 	      </paper-material>
 
-	      <paper-material class="thisMaterial" on-tap="chmod" class="fabButton layout center-center" elevation="0" animated>
+	      <paper-material on-tap="chmod" class="fabButton layout center-center" elevation="0" animated>
 	        tap
 	      </paper-material>	
         	

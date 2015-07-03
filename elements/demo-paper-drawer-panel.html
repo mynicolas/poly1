@@ -6,23 +6,24 @@
 <link rel="import" href="../bower_components/paper-drawer-panel/paper-drawer-panel.html">
 
 <dom-module id="demo-paper-drawer-panel">
-	<template>
-		<style>
-			paper-drawer-panel {
-				position: relative;
-				border: 1px solid #00D2FF;
-			}
-			[drawer] {
-				background-color: #eee;
-			}
-			#drawer-controller {
-				position: relative;
-				left: 300px;
-				top: 100px;
-				z-index: 1;
-			}
-		</style>
 
+	<style>
+		paper-drawer-panel {
+			position: relative;
+			border: 1px solid #00D2FF;
+		}
+		[drawer] {
+			background-color: #eee;
+		}
+		#drawer-controller {
+			position: relative;
+			left: 300px;
+			top: 100px;
+			z-index: 1;
+		}
+	</style>
+	
+	<template>
 		<demo-container title="paper-button">
 
 			<paper-fab id="drawer-controller" icon="{{ mod }}" on-tap="chmod"></paper-fab>

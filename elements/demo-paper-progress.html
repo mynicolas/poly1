@@ -1,0 +1,104 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="demo-container.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-progress/paper-progress.html">
+
+<dom-module id="demo-paper-progress">
+
+	<style>
+		one-kind-container {
+			width: 200px;
+		}
+    paper-progress {
+      display: block;
+      width: 200px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    paper-progress.color-1 {
+      --paper-progress-active-color: var(--paper-light-blue-500);
+      --paper-progress-secondary-color: var(--paper-light-blue-100);
+    }
+
+    paper-progress.color-2 {
+      --paper-progress-active-color: var(--paper-red-500);
+      --paper-progress-secondary-color: var(--paper-red-100);
+    }
+
+    paper-progress.color-3 {
+      --paper-progress-active-color: var(--paper-orange-500);
+      --paper-progress-secondary-color: var(--paper-orange-100);
+    }
+
+    paper-progress.color-4 {
+      --paper-progress-active-color: var(--paper-light-green-500);
+      --paper-progress-secondary-color: var(--paper-light-green-300);
+    }
+	</style>
+
+	<template>
+		<demo-container title="paper-progress">
+
+	  	<one-kind-container title="Progress bar">
+	      <paper-progress id="progress" value="0" max="100"></paper-progress>
+	      <paper-button id="startButton" raised on-tap="startProgress">Start</paper-button>
+	  	</one-kind-container>
+
+			<one-kind-container title="Indeterminate">
+	      <paper-progress indeterminate></paper-progress><br>
+      	<paper-progress class="blue" indeterminate alue="800" min="100" max="1000"></paper-progress><br>
+			</one-kind-container>
+
+			<one-kind-container title="Color">
+	      <paper-progress class="color-1" value="40"></paper-progress><br>
+	      <paper-progress class="color-2" value="800" min="100" max="1000"></paper-progress><br>
+	      <paper-progress class="color-3" value="40"></paper-progress><br>
+	      <paper-progress class="color-4" value="200" max="200"></paper-progress><br>
+	      <paper-progress class="color-5" value="40" secondary-progress="80"></paper-progress><br>
+			</one-kind-container>
+
+		</demo-container>
+	</template>
+	<script>
+		Polymer({
+			is: "demo-paper-progress",
+			properties: {
+				repeat: Number,
+				maxRepeat: 5,
+				animating: {
+					type: Boolean,
+					value: false
+				}
+			},
+			ready: function(){
+				this.progress = this.$.progress;
+				this.startProgress();
+			},
+			nextProgress: function(){
+
+	      this.animating = true;
+	      if (this.progress.value < this.progress.max) {
+	        this.progress.value += (this.progress.step || 1);
+	      } else {
+	        if (++this.repeat >= this.maxRepeat) {
+	          this.animating = false;
+	          this.$.startButton.disabled = false;
+	          return;
+	        }
+	        this.progress.value = this.progress.min;
+	      }
+
+	      requestAnimationFrame(this.nextProgress);
+			},
+			startProgress: function(){
+	      this.repeat = 0;
+      	this.progress.value = this.progress.min;
+	      this.$.startButton.disabled = true;
+	      if (!this.animating) {
+	        this.nextProgress();
+	      }
+			}
+		});
+	</script>
+</dom-module>
